@@ -1,10 +1,10 @@
 package graph;
 
-public class GraphWithAdjacencyMatrix implements Graph {
+public class GraphAdjacencyMatrix implements Graph {
     private final boolean[][] adjacencyMatrix;
     private final int noOfVertices;
 
-    public GraphWithAdjacencyMatrix(int noOfVertices) {
+    public GraphAdjacencyMatrix(int noOfVertices) {
         this.noOfVertices = noOfVertices;
         this.adjacencyMatrix = new boolean[this.noOfVertices][this.noOfVertices];
     }
@@ -18,12 +18,9 @@ public class GraphWithAdjacencyMatrix implements Graph {
     }
 
     @Override
+    // Time Complexity: O(1)
     public boolean addEdge(int source, int destination) {
         if (!this.validateSourceAndDestination(source, destination)) {
-            return false;
-        }
-        if (this.adjacencyMatrix[source][destination] || this.adjacencyMatrix[destination][source]) {
-            System.out.println("edge already exists");
             return false;
         }
         this.adjacencyMatrix[source][destination] = true;
@@ -32,14 +29,12 @@ public class GraphWithAdjacencyMatrix implements Graph {
     }
 
     @Override
+    // Time Complexity: O(1)
     public boolean removeEdge(int source, int destination) {
         if (!this.validateSourceAndDestination(source, destination)) {
             return false;
         }
-        if (!this.adjacencyMatrix[source][destination] || ! this.adjacencyMatrix[destination][source]) {
-            System.out.println("edge doesn't exist");
-            return false;
-        }
+
         this.adjacencyMatrix[source][destination] = false;
         this.adjacencyMatrix[destination][source] = false;
         return false;
@@ -67,8 +62,14 @@ public class GraphWithAdjacencyMatrix implements Graph {
         return s.toString();
     }
 
+    @Override
+    // Time Complexity: O(1)
+    public boolean hasEdge(int source, int destination) {
+        return this.validateSourceAndDestination(source, destination) && this.adjacencyMatrix[source][destination];
+    }
+
     public static void main(String args[]) {
-        Graph g = new GraphWithAdjacencyMatrix(4);
+        Graph g = new GraphAdjacencyMatrix(4);
 
         g.addEdge(0, 1);
         g.addEdge(0, 2);
