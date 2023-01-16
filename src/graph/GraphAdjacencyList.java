@@ -70,6 +70,18 @@ public class GraphAdjacencyList implements Graph {
     }
 
     @Override
+    // Time Complexity: O(1)
+    public int degree(int node) {
+        return this.adjacencyList.get(node).size();
+    }
+
+    @Override
+    // Time Complexity: O(V)
+    public List<Integer> adjacent(int node) {
+        return this.adjacencyList.get(node).stream().toList();
+    }
+
+    @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < noOfVertices; i++) {
@@ -92,6 +104,7 @@ public class GraphAdjacencyList implements Graph {
         g.addEdge(2, 3);
 
         System.out.print(g);
-
+        System.out.println(g.adjacent(2));
+        System.out.println(g.degree(2));
     }
 }
