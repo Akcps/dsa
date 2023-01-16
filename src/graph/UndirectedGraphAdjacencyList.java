@@ -166,6 +166,12 @@ public class UndirectedGraphAdjacencyList implements Graph {
         return s.toString();
     }
 
+
+    @Override
+    public int getVerticesCount() {
+        return this.noOfVertices;
+    }
+
     public static void main(String args[]) {
         Graph g = new UndirectedGraphAdjacencyList(4);
 

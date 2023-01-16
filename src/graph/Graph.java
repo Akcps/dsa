@@ -16,4 +16,6 @@ public interface Graph {
     List<Integer> bfs(int source);
 
     List<Integer> dfs(int source);
+
+    int getVerticesCount();
 }

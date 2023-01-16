@@ -96,6 +96,11 @@ public class UndirectedGraphAdjacencyMatrix implements Graph {
 //        return dfsRecursive(source);
     }
 
+    @Override
+    public int getVerticesCount() {
+        return this.noOfVertices;
+    }
+
     private List<Integer> dfsIterative(int source) {
         List<Integer> result = new ArrayList<>();
 
