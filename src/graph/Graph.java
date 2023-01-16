@@ -12,4 +12,8 @@ public interface Graph {
     int degree(int node);
 
     List<Integer> adjacent(int node);
+
+    List<Integer> bfs(int source);
+
+    List<Integer> dfs(int source);
 }

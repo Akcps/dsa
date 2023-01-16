@@ -2,11 +2,11 @@ package graph;
 
 import java.util.*;
 
-public class GraphAdjacencyList implements Graph {
+public class UndirectedGraphAdjacencyList implements Graph {
     private Map<Integer, Set<Integer>> adjacencyList;
     private final int noOfVertices;
 
-    public GraphAdjacencyList(int noOfVertices) {
+    public UndirectedGraphAdjacencyList(int noOfVertices) {
         this.noOfVertices = noOfVertices;
         this.initAdjacencyList(noOfVertices);
     }
@@ -81,6 +81,78 @@ public class GraphAdjacencyList implements Graph {
         return this.adjacencyList.get(node).stream().toList();
     }
 
+
+    @Override
+    // Time Complexity: O(V + E)
+    public List<Integer> bfs(int source) {
+        List<Integer> result = new ArrayList<>();
+
+        boolean[] visited = new boolean[this.noOfVertices];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(source);
+        visited[source] = true;
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            result.add(node);
+            for (int adj : this.adjacent(node)) {
+                if (!visited[adj]) {
+                    visited[adj] = true;
+                    queue.add(adj);
+                }
+            }
+        }
+        return result;
+    }
+
+    @Override
+    // Time Complexity: O(V + E)
+    public List<Integer> dfs(int source) {
+        return dfsIterative(source);
+//        return dfsRecursive(source);
+    }
+
+    private List<Integer> dfsIterative(int source) {
+        List<Integer> result = new ArrayList<>();
+
+        boolean[] visited = new boolean[this.noOfVertices];
+        Stack<Integer> stack = new Stack<>();
+        stack.add(source);
+        visited[source] = true;
+
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            result.add(node);
+            for (int adj : this.adjacent(node)) {
+                if (!visited[adj]) {
+                    visited[adj] = true;
+                    stack.add(adj);
+                }
+            }
+        }
+        return result;
+    }
+
+
+    private List<Integer> dfsRecursive(int source) {
+        List<Integer> result = new ArrayList<>();
+        boolean[] visited = new boolean[this.noOfVertices];
+        dfsRecurse(source, visited, result);
+        return result;
+    }
+
+    private void dfsRecurse(int source, boolean[] visited, List<Integer> result) {
+        result.add(source);
+        visited[source] = true;
+        for (int adj : this.adjacent(source)) {
+            if (!visited[adj]) {
+                visited[adj] = true;
+                dfsRecurse(adj, visited, result);
+            }
+        }
+    }
+
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -95,7 +167,7 @@ public class GraphAdjacencyList implements Graph {
     }
 
     public static void main(String args[]) {
-        Graph g = new GraphAdjacencyList(4);
+        Graph g = new UndirectedGraphAdjacencyList(4);
 
         g.addEdge(0, 1);
         g.addEdge(0, 2);
@@ -106,5 +178,7 @@ public class GraphAdjacencyList implements Graph {
         System.out.print(g);
         System.out.println(g.adjacent(2));
         System.out.println(g.degree(2));
+        System.out.println("Bfs :" + g.bfs(2));
+        System.out.println("Dfs :" + g.dfs(2));
     }
 }
