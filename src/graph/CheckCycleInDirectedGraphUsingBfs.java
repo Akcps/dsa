@@ -5,19 +5,17 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class TopologicalSortBfs implements TopologicalSort {
+public class CheckCycleInDirectedGraphUsingBfs {
     private Graph graph;
 
-    public TopologicalSortBfs(Graph graph) {
+    public CheckCycleInDirectedGraphUsingBfs(Graph graph) {
         this.graph = graph;
     }
 
-    @Override
-    // Time Complexity: O(V + E)
-    public List<Integer> sort() {
+    public boolean hasCycle() {
         int[] inDegree = new int[graph.getVerticesCount()];
 
-        List<Integer> result = new ArrayList<>();
+        int count = 0;
         for (int i = 0; i < graph.getVerticesCount(); i++) {
             inDegree[i] = graph.degree(i);
         }
@@ -31,7 +29,7 @@ public class TopologicalSortBfs implements TopologicalSort {
 
         while (!queue.isEmpty()) {
             int node = queue.poll();
-            result.add(node);
+            count++;
             for (int adj : graph.adjacent(node)) {
                 inDegree[adj]--;
                 if (inDegree[adj] == 0) {
@@ -39,19 +37,31 @@ public class TopologicalSortBfs implements TopologicalSort {
                 }
             }
         }
-        return result;
+        return count != graph.getVerticesCount();
     }
-
 
     public static void main(String[] args) {
         Graph graph = new DirectedGraphAdjacencyList(5);
-        graph.addEdge(0, 2);
-        graph.addEdge(0, 3);
+        graph.addEdge(0, 1);
+        graph.addEdge(1, 2);
         graph.addEdge(2, 3);
-        graph.addEdge(1, 3);
-        graph.addEdge(1, 4);
+        graph.addEdge(3, 1);
+        graph.addEdge(4, 3);
 
-        TopologicalSort sort = new TopologicalSortBfs(graph);
-        System.out.println(sort.sort());
+        CheckCycleInDirectedGraphUsingBfs graphCheck = new CheckCycleInDirectedGraphUsingBfs(graph);
+        System.out.println(graphCheck.hasCycle());
+
+
+        graph = new DirectedGraphAdjacencyList(5);
+        graph.addEdge(0, 1);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+        graph.addEdge(4, 1);
+        graph.addEdge(4, 3);
+
+        graphCheck = new CheckCycleInDirectedGraphUsingBfs(graph);
+        System.out.println(graphCheck.hasCycle());
     }
+
+
 }

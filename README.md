@@ -13,4 +13,5 @@ Implementation of Data Structures and Algorithms
 7. [Check for cycle in Undirected Graph](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInUndirectedGraph.java)
 8. [Shortest Distance from a source in a unweighted Undirected Graph](https://github.com/Akcps/dsa/blob/main/src/graph/ShortestDistanceUndirectedUnweightedGraph.java)
 9. [Check for cycle in Directed Graph](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInDirectedGraph.java)
-10. [Topological Sort (BFS)](https://github.com/Akcps/dsa/blob/main/src/graph/TopologicalSortBfs.java)
+10. [Topological Sort (BFS Kahn's Algorithm)](https://github.com/Akcps/dsa/blob/main/src/graph/TopologicalSortBfs.java)
+11. [Check for cycle in Directed Graph (BFS Kahn's Algorithm)](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInDirectedGraphUsingBfs.java)
