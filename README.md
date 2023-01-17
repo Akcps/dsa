@@ -11,5 +11,5 @@ Implementation of Data Structures and Algorithms
 5. [DFS Recursive Traversal](https://github.com/Akcps/dsa/blob/main/src/graph/DfsRecursiveTraversal.java)
 6. [DFS Iterative Traversal](https://github.com/Akcps/dsa/blob/main/src/graph/DfsIterativeTraversal.java)
 7. [Check for cycle in Undirected Graph](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInUndirectedGraph.java)
-8. [Check for cycle in Directed Graph](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInDirectedGraph.java)
-9. [Shortest Distance from a source in a unweighted Unirected Graph](https://github.com/Akcps/dsa/blob/main/src/graph/ShortestDistanceUndirectedUnweightedGraph.java)
+8. [Shortest Distance from a source in a unweighted Undirected Graph](https://github.com/Akcps/dsa/blob/main/src/graph/ShortestDistanceUndirectedUnweightedGraph.java)
+9. [Check for cycle in Directed Graph](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInDirectedGraph.java)
