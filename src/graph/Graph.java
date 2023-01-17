@@ -13,9 +13,9 @@ public interface Graph {
 
     List<Integer> adjacent(int node);
 
-    List<Integer> bfs(int source);
+    List<Integer> bfs();
 
-    List<Integer> dfs(int source);
+    List<Integer> dfs();
 
     int getVerticesCount();
 }

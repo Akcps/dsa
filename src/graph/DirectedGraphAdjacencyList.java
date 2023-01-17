@@ -83,74 +83,19 @@ public class DirectedGraphAdjacencyList implements Graph {
 
     @Override
     // Time Complexity: O(V + E)
-    public List<Integer> bfs(int source) {
-        List<Integer> result = new ArrayList<>();
-
-        boolean[] visited = new boolean[this.noOfVertices];
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(source);
-        visited[source] = true;
-
-        while (!queue.isEmpty()) {
-            int node = queue.poll();
-            result.add(node);
-            for (int adj : this.adjacent(node)) {
-                if (!visited[adj]) {
-                    visited[adj] = true;
-                    queue.add(adj);
-                }
-            }
-        }
-        return result;
+    public List<Integer> bfs() {
+        Traversal t = new BfsTraversal(this);
+        return t.traverse();
     }
 
     @Override
     // Time Complexity: O(V + E)
-    public List<Integer> dfs(int source) {
-        return dfsIterative(source);
-//        return dfsRecursive(source);
+    public List<Integer> dfs() {
+//        Traversal t = new DfsIterativeTraversal(this);
+//        return t.traverse();
+        Traversal t = new DfsRecursiveTraversal(this);
+        return t.traverse();
     }
-
-    private List<Integer> dfsIterative(int source) {
-        List<Integer> result = new ArrayList<>();
-
-        boolean[] visited = new boolean[this.noOfVertices];
-        Stack<Integer> stack = new Stack<>();
-        stack.add(source);
-        visited[source] = true;
-
-        while (!stack.isEmpty()) {
-            int node = stack.pop();
-            result.add(node);
-            for (int adj : this.adjacent(node)) {
-                if (!visited[adj]) {
-                    visited[adj] = true;
-                    stack.add(adj);
-                }
-            }
-        }
-        return result;
-    }
-
-
-    private List<Integer> dfsRecursive(int source) {
-        List<Integer> result = new ArrayList<>();
-        boolean[] visited = new boolean[this.noOfVertices];
-        dfsRecurse(source, visited, result);
-        return result;
-    }
-
-    private void dfsRecurse(int source, boolean[] visited, List<Integer> result) {
-        result.add(source);
-        visited[source] = true;
-        for (int adj : this.adjacent(source)) {
-            if (!visited[adj]) {
-                visited[adj] = true;
-                dfsRecurse(adj, visited, result);
-            }
-        }
-    }
-
 
     @Override
     public String toString() {
@@ -183,7 +128,7 @@ public class DirectedGraphAdjacencyList implements Graph {
         System.out.print(g);
         System.out.println(g.adjacent(2));
         System.out.println(g.degree(2));
-        System.out.println("Bfs :" + g.bfs(2));
-        System.out.println("Dfs :" + g.dfs(2));
+        System.out.println("Bfs :" + g.bfs());
+        System.out.println("Dfs :" + g.dfs());
     }
 }
