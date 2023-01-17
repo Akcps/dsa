@@ -5,10 +5,12 @@ import java.util.*;
 public class DirectedGraphAdjacencyList implements Graph {
     private Map<Integer, Set<Integer>> adjacencyList;
     private final int noOfVertices;
+    private int[] inDegree;
 
     public DirectedGraphAdjacencyList(int noOfVertices) {
         this.noOfVertices = noOfVertices;
         this.initAdjacencyList(noOfVertices);
+        this.inDegree = new int[noOfVertices];
     }
 
     private void initAdjacencyList(int noOfVertices) {
@@ -32,7 +34,9 @@ public class DirectedGraphAdjacencyList implements Graph {
         if (!this.validateSourceAndDestination(source, destination)) {
             return false;
         }
+        this.inDegree[destination]++;
         return this.adjacencyList.get(source).add(destination);
+
     }
 
     @Override
@@ -71,7 +75,7 @@ public class DirectedGraphAdjacencyList implements Graph {
     @Override
     // Time Complexity: O(1)
     public int degree(int node) {
-        return this.adjacencyList.get(node).size();
+        return inDegree[node];
     }
 
     @Override
