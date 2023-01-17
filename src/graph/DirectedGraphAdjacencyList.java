@@ -65,7 +65,7 @@ public class DirectedGraphAdjacencyList implements Graph {
         }
         Set<Integer> adjacentVertices = this.adjacencyList.get(source);
         for (int i : adjacentVertices) {
-            if (source == i) {
+            if (destination == i) {
                 return true;
             }
         }

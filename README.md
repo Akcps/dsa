@@ -16,3 +16,4 @@ Implementation of Data Structures and Algorithms
 10. [Topological Sort (BFS Kahn's Algorithm)](https://github.com/Akcps/dsa/blob/main/src/graph/TopologicalSortBfs.java)
 11. [Check for cycle in Directed Graph (BFS Kahn's Algorithm)](https://github.com/Akcps/dsa/blob/main/src/graph/CheckCycleInDirectedGraphUsingBfs.java)
 12. [Topological Sort (DFS)](https://github.com/Akcps/dsa/blob/main/src/graph/TopologicalSortDfs.java)
+13. [Directed Weighted Graph(Adjacency List)](https://github.com/Akcps/dsa/blob/main/src/graph/DirectedWeightedGraph.java)
