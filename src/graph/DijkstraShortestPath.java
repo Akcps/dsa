@@ -18,6 +18,7 @@ public class DijkstraShortestPath {
 
         for (int k = 0; k < graph.getVerticesCount(); k++) {
             int u = -1;
+            // TODO: improve time complexity by using a Min Heap
             for (int i = 0; i < graph.getVerticesCount(); i++) {
                 if (!completed[i] && (u == -1 || distance[i] < distance[u])) {
                     u = i;
