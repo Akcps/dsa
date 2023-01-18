@@ -20,3 +20,4 @@ Implementation of Data Structures and Algorithms
 14. [Shortest Path in Directed Acyclic Graph (DAG)](https://github.com/Akcps/dsa/blob/main/src/graph/ShortestPathInDag.java)
 15. [Undirected Weighted Graph](https://github.com/Akcps/dsa/blob/main/src/graph/UndirectedWeightedGraph.java)
 16. [Dijkstra's Shortest Path](https://github.com/Akcps/dsa/blob/main/src/graph/DijkstraShortestPath.java)
+17. [Prim's Minimum Spanning Tree](https://github.com/Akcps/dsa/blob/main/src/graph/PrimMinimumSpanningTree.java)
