@@ -21,3 +21,4 @@ Implementation of Data Structures and Algorithms
 15. [Undirected Weighted Graph](https://github.com/Akcps/dsa/blob/main/src/graph/UndirectedWeightedGraph.java)
 16. [Dijkstra's Shortest Path](https://github.com/Akcps/dsa/blob/main/src/graph/DijkstraShortestPath.java)
 17. [Prim's Minimum Spanning Tree](https://github.com/Akcps/dsa/blob/main/src/graph/PrimMinimumSpanningTree.java)
+18. [Kosaraju Strongly Connected Component](https://github.com/Akcps/dsa/blob/main/src/graph/KosarajuStronglyConnectedComponent.java)
