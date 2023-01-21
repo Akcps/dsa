@@ -12,7 +12,7 @@ public class DijkstraShortestPath {
 
     public int[] shortestPath(int source) {
         int[] distance = new int[graph.getVerticesCount()];
-        boolean[] completed = new boolean[graph.getVerticesCount()];
+        boolean[] visited = new boolean[graph.getVerticesCount()];
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[source] = 0;
 
@@ -20,13 +20,13 @@ public class DijkstraShortestPath {
             int u = -1;
             // TODO: improve time complexity by using a Min Heap
             for (int i = 0; i < graph.getVerticesCount(); i++) {
-                if (!completed[i] && (u == -1 || distance[i] < distance[u])) {
+                if (!visited[i] && (u == -1 || distance[i] < distance[u])) {
                     u = i;
                 }
             }
-            completed[u] = true;
+            visited[u] = true;
             for (Edge v: graph.adjacent(u)) {
-                if (!completed[v.getDestination()]) {
+                if (!visited[v.getDestination()]) {
                     distance[v.getDestination()] = Math.min(distance[v.getDestination()], v.getWeight() + distance[u]);
                 }
             }
