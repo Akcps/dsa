@@ -1,4 +1,4 @@
-##Trie
+## Trie
 
 ### Basic Operations
 1. Insert a word 
