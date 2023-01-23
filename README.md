@@ -28,3 +28,7 @@ Implementation of Data Structures and Algorithms
 
 ### Trie
 1. [Trie - Insert, Search, Prefix Search, Delete](https://github.com/Akcps/dsa/blob/main/src/trie/Trie.java)
+
+### Disjoint Set
+1. [Union By Rank](https://github.com/Akcps/dsa/blob/main/src/disjointset/DisjointSetUnionByRank.java)
+2. [Path Compression](https://github.com/Akcps/dsa/blob/main/src/disjointset/DisjointSetPathCompression.java)
