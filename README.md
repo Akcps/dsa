@@ -23,7 +23,7 @@ Implementation of Data Structures and Algorithms
 17. [Prim's Minimum Spanning Tree](https://github.com/Akcps/dsa/blob/main/src/graph/PrimMinimumSpanningTree.java)
 18. [Kosaraju's Strongly Connected Component](https://github.com/Akcps/dsa/blob/main/src/graph/KosarajuStronglyConnectedComponent.java)
 19. [Bellman Ford Shortest Path](https://github.com/Akcps/dsa/blob/main/src/graph/BellmanFordShortestPath.java)
-
+20. [Kruskal's Minimum Spanning Tree](https://github.com/Akcps/dsa/blob/main/src/graph/KruskalMinimumSpanningTree.java)
 
 
 ### Trie

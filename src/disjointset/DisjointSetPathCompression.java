@@ -22,7 +22,7 @@ public class DisjointSetPathCompression implements DisjointSet {
         if (x == parent[x]) {
             return x;
         }
-        parent[x] = find(x);
+        parent[x] = find(parent[x]);
         return parent[x];
     }
 
