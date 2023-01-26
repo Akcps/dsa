@@ -2,7 +2,7 @@
 
 Implementation of Data Structures and Algorithms
 
-### Graph
+## Graph
 
 1. [Undirected Graph (Adjacency Matrix)](https://github.com/Akcps/dsa/blob/main/src/graph/UndirectedGraphAdjacencyMatrix.java)
 2. [Undirected Graph (Adjacency List)](https://github.com/Akcps/dsa/blob/main/src/graph/UndirectedGraphAdjacencyList.java)
@@ -26,9 +26,28 @@ Implementation of Data Structures and Algorithms
 20. [Kruskal's Minimum Spanning Tree](https://github.com/Akcps/dsa/blob/main/src/graph/KruskalMinimumSpanningTree.java)
 
 
-### Trie
+## Trie
 1. [Trie - Insert, Search, Prefix Search, Delete](https://github.com/Akcps/dsa/blob/main/src/trie/Trie.java)
 
-### Disjoint Set
+## Disjoint Set
 1. [Union By Rank](https://github.com/Akcps/dsa/blob/main/src/disjointset/DisjointSetUnionByRank.java)
 2. [Path Compression](https://github.com/Akcps/dsa/blob/main/src/disjointset/DisjointSetPathCompression.java)
+
+
+## Trees
+
+### Traversal
+
+1. [Inorder Traversal (Iterative)](https://github.com/Akcps/dsa/blob/main/src/tree/InorderIterativeTraversal.java)
+2. [Inorder Traversal (Recursive)](https://github.com/Akcps/dsa/blob/main/src/tree/InorderRecursiveTraversal.java)
+3. [Preorder Traversal (Iterative)](https://github.com/Akcps/dsa/blob/main/src/tree/PreorderIterativeTraversal.java)
+4. [Preorder Traversal (Recursive)](https://github.com/Akcps/dsa/blob/main/src/tree/PrerderRecursiveTraversal.java)
+5. [Postorder Traversal (Iterative)](https://github.com/Akcps/dsa/blob/main/src/tree/PostorderIterativeTraversal.java)
+6. [Postorder Traversal (Recursive)](https://github.com/Akcps/dsa/blob/main/src/tree/PostorderRecursiveTraversal.java)
+7. [BFS Traversal / Level order Traversal](https://github.com/Akcps/dsa/blob/main/src/tree/LevelorderTraversal.java)
+8. [Level order Traversal(Line By Line)](https://github.com/Akcps/dsa/blob/main/src/tree/LevelorderTraversalLineByLine.java)
+
+
+### Operations
+
+1. [Height of a Tree](https://github.com/Akcps/dsa/blob/main/src/tree/TreeHeight.java)
