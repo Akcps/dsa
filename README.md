@@ -1,6 +1,6 @@
-# dsa
+# Data Structures And Algorithms
 
-Implementation of Data Structures and Algorithms
+Implementation of the popular Data Structures and Algorithms
 
 ## Graph
 
