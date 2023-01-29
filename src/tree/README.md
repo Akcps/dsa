@@ -18,4 +18,4 @@
 2. [Nodes at k Distance in a Tree](https://github.com/Akcps/dsa/blob/main/src/tree/TreeKDistanceNode.java)
 3. [Left View of a Tree](https://github.com/Akcps/dsa/blob/main/src/tree/TreeLeftView.java)
 4. [Validate Child Sum Property of a tree](https://github.com/Akcps/dsa/blob/main/src/tree/ChildSumProperty.java) 
-5. [Check whether a tree is balanced or not ](https://github.com/Akcps/dsa/blob/main/src/tree/CheckBalance.java)
+5. [Check whether a tree is balanced or not ](https://github.com/Akcps/dsa/blob/main/src/tree/CheckBalanced.java)
