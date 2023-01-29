@@ -6,6 +6,7 @@ public class TreeNode {
     private int data;
 
     public TreeNode() {
+        this.data = 0;
     }
 
     public TreeNode(int data) {
@@ -38,11 +39,23 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
-                "left=" + left.data +
-                ", right=" + right.data +
-                ", data=" + data +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("TreeNode {");
+        sb.append("left: ");
+        if (left != null) {
+            sb.append(left.data);
+        } else {
+            sb.append("null");
+        }
+        sb.append(", ");
+        sb.append("right: ");
+        if (right != null) {
+            sb.append(right.data);
+        } else {
+            sb.append("null");
+        }
+        sb.append("}");
+        return sb.toString();
     }
 
     public static void main(String[] args) {
