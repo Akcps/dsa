@@ -18,7 +18,7 @@ public class ConvertBinaryTreeToDLL {
             current = root;
         } else {
             root.setLeft(prev);
-            prev.setLeft(root);
+            prev.setRight(root);
         }
         prev = root;
         convertToDLL(root.getRight());
