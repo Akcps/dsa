@@ -21,3 +21,4 @@
 5. [Check whether a tree is balanced or not ](https://github.com/Akcps/dsa/blob/main/src/tree/CheckBalanced.java)
 6. [Convert a tree to doubly LinkedList](https://github.com/Akcps/dsa/blob/main/src/tree/ConvertBinaryTreeToDLL.java)
 7. [Construct a tree from inorder and preorder traversal](https://github.com/Akcps/dsa/blob/main/src/tree/ConstructTreeFromPreorderAndInorder.java)
+8. [Construct a tree from inorder and postorder traversal](https://github.com/Akcps/dsa/blob/main/src/tree/ConstructTreeFromPostorderAndInorder.java)
