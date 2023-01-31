@@ -7,6 +7,10 @@ public class Tree {
         this.root = new TreeNode(data);
     }
 
+    public Tree(TreeNode root) {
+        this.root = root;
+    }
+
     public TreeNode getRoot() {
         return root;
     }

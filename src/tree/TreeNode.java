@@ -54,6 +54,9 @@ public class TreeNode {
         } else {
             sb.append("null");
         }
+        sb.append(", ");
+        sb.append("data: ");
+        sb.append(this.data);
         sb.append("}");
         return sb.toString();
     }
