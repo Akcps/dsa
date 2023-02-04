@@ -46,6 +46,7 @@ Implementation of the popular Data Structures and Algorithms
 6. [Postorder Traversal (Recursive)](https://github.com/Akcps/dsa/blob/main/src/tree/PostorderRecursiveTraversal.java)
 7. [BFS Traversal / Level order Traversal](https://github.com/Akcps/dsa/blob/main/src/tree/LevelorderTraversal.java)
 8. [Level order Traversal(Line By Line)](https://github.com/Akcps/dsa/blob/main/src/tree/LevelorderTraversalLineByLine.java)
+9. [Spiral Level order Traversal(Line By Line)](https://github.com/Akcps/dsa/blob/main/src/tree/SpiralTraversalLineByLine.java)
 
 
 ### Operations
