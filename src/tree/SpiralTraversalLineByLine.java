@@ -49,6 +49,48 @@ public class SpiralTraversalLineByLine {
         return result;
     }
 
+    public List<List<Integer>> traverseUsing2Stacks() {
+        List<List<Integer>> result = new ArrayList<>();
+        if (tree.getRoot() == null) {
+            return result;
+        }
+
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<TreeNode> s2 = new Stack<>();
+        s1.push(tree.getRoot());
+        boolean leftToRight = true;
+
+        while (!s1.isEmpty() || !s2.isEmpty()) {
+            List<Integer> currentLevel = new ArrayList<>();
+            if (leftToRight) {
+                while (!s1.isEmpty()) {
+                    TreeNode current = s1.pop();
+                    currentLevel.add(current.getData());
+                    if (current.getLeft() != null) {
+                        s2.push(current.getLeft());
+                    }
+                    if (current.getRight() != null) {
+                        s2.push(current.getRight());
+                    }
+                }
+            } else {
+                while (!s2.isEmpty()) {
+                    TreeNode current = s2.pop();
+                    currentLevel.add(current.getData());
+                    if (current.getRight() != null) {
+                        s1.push(current.getRight());
+                    }
+                    if (current.getLeft() != null) {
+                        s1.push(current.getLeft());
+                    }
+                }
+            }
+            result.add(currentLevel);
+            leftToRight = !leftToRight;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         Tree tree = new Tree(1);
         TreeNode root = tree.getRoot();
@@ -64,7 +106,6 @@ public class SpiralTraversalLineByLine {
 
         System.out.println(tree);
         SpiralTraversalLineByLine treeTraversal = new SpiralTraversalLineByLine(tree);
-
         System.out.println("Spiral Level order traversal line by line: ");
         for (List<Integer> level : treeTraversal.traverse()) {
             System.out.println(level);
