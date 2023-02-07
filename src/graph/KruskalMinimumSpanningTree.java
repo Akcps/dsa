@@ -54,12 +54,8 @@ public class KruskalMinimumSpanningTree {
 
         for (int i = 0, s = 0; i < edges.size() && s < this.noOfVertices; i++) {
             Edge e = edges.get(i);
-            System.out.println("u: " + e.getSource());
             int uParent = find(e.getSource());
-            System.out.println("uParent: " + uParent);
-            System.out.println("v: " + e.getDestination());
             int vParent = find(e.getDestination());
-            System.out.println("vParent: " + vParent);
             if (uParent != vParent) {
                 result += e.getWeight();
                 union(uParent, vParent);
